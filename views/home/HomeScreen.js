@@ -1,12 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Text, View, Button } from 'react-native';
-import { UserContext } from '../../context/UserContext';
 
-export const WelcomeScreen = ({ setLoginState }) => {
+export const HomeScreen = ({ setLoginState }) => {
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Settings</Text>
+            <Text>Home!</Text>
             <Button onPress={setLoginState} title="Cambiar Estado" />
         </View>
-    );
-};
+    )
+}

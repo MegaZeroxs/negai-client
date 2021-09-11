@@ -1,17 +1,8 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { NavigationContainer } from '@react-navigation/native';
-import { Text, View, Button } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-ionicons';
-
-const HomeScreen = ({setLoginState}) => {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Home!</Text>
-        <Button onPress={setLoginState} title="Cambiar Estado" />
-      </View>
-    );
-  }
+import { HomeScreen } from '../views/home/HomeScreen';
 
 export const TabNavigator = ({setLoginState}) => {
     const Tab = createBottomTabNavigator();
@@ -36,7 +27,9 @@ export const TabNavigator = ({setLoginState}) => {
                     tabBarInactiveTintColor: 'gray',
                 })}
             >
-                <Tab.Screen name="Home" component={HomeScreen} setLoginState={setLoginState} />
+                <Tab.Screen name="Home">
+                    {() => <HomeScreen setLoginState={setLoginState} />}
+                </Tab.Screen>
                 <Tab.Screen name="Settings" component={HomeScreen} />
             </Tab.Navigator>
         </NavigationContainer>
