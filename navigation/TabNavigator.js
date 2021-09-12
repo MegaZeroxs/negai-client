@@ -13,7 +13,7 @@ export const TabNavigator = ({setLoginState}) => {
                     tabBarIcon: ({ focused, color, size }) => {
                         let iconName;
 
-                        if (route.name === 'Home') {
+                        if (route.name === 'Inicio') {
                             iconName = focused
                                 ? 'ios-information-circle'
                                 : 'ios-information-circle-outline';
@@ -25,11 +25,17 @@ export const TabNavigator = ({setLoginState}) => {
                     },
                     tabBarActiveTintColor: 'tomato',
                     tabBarInactiveTintColor: 'gray',
+                    tabBarShowLabel: false
                 })}
+
             >
-                <Tab.Screen name="Home">
+{/*                 <Tab.Screen name="Home">
                     {() => <HomeScreen setLoginState={setLoginState} />}
-                </Tab.Screen>
+                </Tab.Screen> */}
+                <Tab.Screen name="Inicio" component={HomeScreen} />
+                <Tab.Screen name="Búscar" component={HomeScreen} />
+                <Tab.Screen name="Mis compras" component={HomeScreen} />
+                <Tab.Screen name="Lista de deseos" component={HomeScreen} />
                 <Tab.Screen name="Settings" component={HomeScreen} />
             </Tab.Navigator>
         </NavigationContainer>
