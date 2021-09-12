@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import { Text, View, Image, Pressable, StyleSheet, ImageBackground } from 'react-native';
 import { UserContext } from '../../context/UserContext';
+import LoginScreen from '../login/LoginScreen';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import RegisterScreen from '../register/RegisterScreen';
 
-export const WelcomeScreen = () => {
-
-    const {setLoginState} = useContext(UserContext)
-
+const WelcomeOptionScreen = ({navigation}) => {
+    const { setLoginState } = useContext(UserContext);
     return (
         <View style={styles.container}>
             <ImageBackground source={require('../../assets/test_img/login.jpg')} resizeMode="cover" style={styles.image}>
@@ -18,12 +20,25 @@ export const WelcomeScreen = () => {
                 <View style={styles.btn_containers}>
                     <View style={styles.btn_containers_row}>
                         <Text style={styles.big_title}>Compra tu serie favorita... ¿O tal vez la próxima?</Text>
-                        <Pressable style={[styles.btn, styles.btn_normal]} onPress={setLoginState}><Text style={styles.btn_text}>Iniciar sesión</Text></Pressable>
-                        <Pressable style={[styles.btn, styles.btn_primary]} onPress={setLoginState}><Text style={[styles.btn_text, styles.btn_text_primary]}>Registrarse</Text></Pressable>
+                        <Pressable style={[styles.btn, styles.btn_normal]} onPress={() => navigation.navigate('Iniciar sesión')}><Text style={styles.btn_text}>Iniciar sesión</Text></Pressable>
+                        <Pressable style={[styles.btn, styles.btn_primary]} onPress={() => navigation.navigate('Registrarme')}><Text style={[styles.btn_text, styles.btn_text_primary]}>Registrarse</Text></Pressable>
                     </View>
                 </View>
             </ImageBackground>
         </View>
+    );
+}
+
+const Stack = createStackNavigator();
+export const WelcomeScreen = () => {
+    return (
+        <NavigationContainer>
+            <Stack.Navigator>
+                <Stack.Screen name="Home" options={{headerShown: false}} component={WelcomeOptionScreen} />
+                <Stack.Screen name="Iniciar sesión" component={LoginScreen} />
+                <Stack.Screen name="Registrarme" component={RegisterScreen} />
+            </Stack.Navigator>
+        </NavigationContainer>
     );
 };
 
