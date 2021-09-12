@@ -45,9 +45,8 @@ const styles = StyleSheet.create({
         justifyContent: "flex-start"
     },
     big_title: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        fontFamily: "CreatoDisplay-ExtraBold"
+        fontSize: 24,
+        fontFamily: 'CreatoDisplay-Black'
     },
     btn_containers: {
         justifyContent: "flex-end",
@@ -69,8 +68,8 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     btn_text: {
-        fontSize: 16,
-        fontWeight: 'bold'
+        fontSize: 18,
+        fontFamily: 'CreatoDisplay-Bold'
     },
     btn_primary: {
         borderColor: "#c92976",

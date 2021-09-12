@@ -68,6 +68,12 @@
 		<string>CreatoDisplay-RegularItalic.otf</string>
 		<string>CreatoDisplay-Thin.otf</string>
 		<string>CreatoDisplay-ThinItalic.otf</string>
+		<string>CreatoDisplay-Black.ttf</string>
+		<string>CreatoDisplay-Bold.ttf</string>
+		<string>CreatoDisplay-BoldItalic.ttf</string>
+		<string>CreatoDisplay-ExtraBold.ttf</string>
+		<string>CreatoDisplay-ExtraBoldItalic.ttf</string>
+		<string>CreatoDisplay-Regular.ttf</string>
 	</array>
 </dict>
 </plist>
