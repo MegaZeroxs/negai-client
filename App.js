@@ -1,8 +1,5 @@
 import React from 'react';
 import { Text, View, Button } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-ionicons';
 import { WelcomeScreen } from './views/welcome/WelcomeScreen';
 import { UserContext } from './context/UserContext';
 import { useSession } from './hooks/useSession';

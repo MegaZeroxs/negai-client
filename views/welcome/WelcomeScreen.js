@@ -15,7 +15,7 @@ export const WelcomeScreen = ({ setLoginState }) => {
                 </View>
                 <View style={styles.btn_containers}>
                     <View style={styles.btn_containers_row}>
-                        <Text style={styles.big_title}>Compra tu serie favorita, ¿O tal vez la próxima?</Text>
+                        <Text style={styles.big_title}>Compra tu serie favorita... ¿O tal vez la próxima?</Text>
                         <Pressable style={[styles.btn, styles.btn_normal]} onPress={setLoginState}><Text style={styles.btn_text}>Iniciar sesión</Text></Pressable>
                         <Pressable style={[styles.btn, styles.btn_primary]} onPress={setLoginState}><Text style={[styles.btn_text, styles.btn_text_primary]}>Registrarse</Text></Pressable>
                     </View>
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     },
     logo: {
         resizeMode: 'contain',
-        width: '45%',
+        width: '40%',
         height: 75
     },
     header: {
@@ -46,7 +46,8 @@ const styles = StyleSheet.create({
     },
     big_title: {
         fontSize: 24,
-        fontFamily: 'CreatoDisplay-Black'
+        fontFamily: 'CreatoDisplay-Black',
+        marginBottom: 15
     },
     btn_containers: {
         justifyContent: "flex-end",
@@ -54,27 +55,27 @@ const styles = StyleSheet.create({
     },
     btn_containers_row: {
         backgroundColor: "#FFF",
-        paddingVertical: 40,
+        paddingVertical: 35,
         alignItems: 'center',
-        paddingHorizontal: 20,
+        paddingHorizontal: 32,
     },
     btn: {
         backgroundColor: "#FFF",
         color: "#000",
         marginTop: 15,
-        padding: 15,
+        padding: 12,
         borderWidth: 2,
         width: "100%",
         alignItems: 'center'
     },
     btn_text: {
-        fontSize: 18,
+        fontSize: 20,
         fontFamily: 'CreatoDisplay-Bold'
     },
     btn_primary: {
-        borderColor: "#c92976",
+        borderColor: "#f04e98",
     },
     btn_text_primary: {
-        color: "#c92976"
+        color: "#f04e98"
     }
 });
