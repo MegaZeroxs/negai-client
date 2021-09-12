@@ -54,6 +54,20 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Ionicons.ttf</string>
+		<string>CreatoDisplay-Black.otf</string>
+		<string>CreatoDisplay-BlackItalic.otf</string>
+		<string>CreatoDisplay-Bold.otf</string>
+		<string>CreatoDisplay-BoldItalic.otf</string>
+		<string>CreatoDisplay-ExtraBold.otf</string>
+		<string>CreatoDisplay-ExtraBoldItalic.otf</string>
+		<string>CreatoDisplay-Light.otf</string>
+		<string>CreatoDisplay-LightItalic.otf</string>
+		<string>CreatoDisplay-Medium.otf</string>
+		<string>CreatoDisplay-MediumItalic.otf</string>
+		<string>CreatoDisplay-Regular.otf</string>
+		<string>CreatoDisplay-RegularItalic.otf</string>
+		<string>CreatoDisplay-Thin.otf</string>
+		<string>CreatoDisplay-ThinItalic.otf</string>
 	</array>
 </dict>
 </plist>

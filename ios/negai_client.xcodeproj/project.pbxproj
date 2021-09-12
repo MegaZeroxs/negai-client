@@ -13,6 +13,20 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B1118432B61B4268B0A2E4F1 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40D96421A72E4C07B7E50F90 /* Ionicons.ttf */; };
+		CD6FC00C563A44AC8D37676D /* CreatoDisplay-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAEA7A13C23D4732BFDD131C /* CreatoDisplay-Black.otf */; };
+		DED968A614F54BFBAC4B1386 /* CreatoDisplay-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 98C9828A0F384D08A6C1AC02 /* CreatoDisplay-BlackItalic.otf */; };
+		8F70D3DCEC1E4597968B06EA /* CreatoDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC923CFB865A4473B79811C1 /* CreatoDisplay-Bold.otf */; };
+		816F8A6F2BD44779B153E297 /* CreatoDisplay-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB53105E055C43DA8B6695D7 /* CreatoDisplay-BoldItalic.otf */; };
+		F4E9239D449D4361854A6885 /* CreatoDisplay-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B3043DE081D486A9AD70FD6 /* CreatoDisplay-ExtraBold.otf */; };
+		CB16CB34A757490FB70C566E /* CreatoDisplay-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8788D55CCAC44264A7ABA3E8 /* CreatoDisplay-ExtraBoldItalic.otf */; };
+		A1F009A9EF974DD8B6FFFDC9 /* CreatoDisplay-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FCF272DAD5F84740800248D1 /* CreatoDisplay-Light.otf */; };
+		923E942B821C404B91F291A4 /* CreatoDisplay-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E7CC842F78D4C449CC2E93E /* CreatoDisplay-LightItalic.otf */; };
+		ED6694995A424AE880452FDF /* CreatoDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A357FE4CA2C54CA5943219AD /* CreatoDisplay-Medium.otf */; };
+		1EAD57C4A8F9422889172A0C /* CreatoDisplay-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 396F00308F1744FC9D9D15CA /* CreatoDisplay-MediumItalic.otf */; };
+		8C8A81C81DD14E1491C7AA41 /* CreatoDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CC8905D47764275963AE355 /* CreatoDisplay-Regular.otf */; };
+		6A4D07C100AD489AA3A00C44 /* CreatoDisplay-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D2290903C244C1CA49DBA97 /* CreatoDisplay-RegularItalic.otf */; };
+		5E465906BE414A42B1F19EED /* CreatoDisplay-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 94C7D7F401F6485BA9DF8FED /* CreatoDisplay-Thin.otf */; };
+		55DAC70B60C245F49A35418C /* CreatoDisplay-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 777761DD032D4BC7ACB50D0D /* CreatoDisplay-ThinItalic.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +52,20 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = negai_client/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		40D96421A72E4C07B7E50F90 /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/react-native-ionicons/fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BAEA7A13C23D4732BFDD131C /* CreatoDisplay-Black.otf */ = {isa = PBXFileReference; name = "CreatoDisplay-Black.otf"; path = "../assets/fonts/CreatoDisplay-Black.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		98C9828A0F384D08A6C1AC02 /* CreatoDisplay-BlackItalic.otf */ = {isa = PBXFileReference; name = "CreatoDisplay-BlackItalic.otf"; path = "../assets/fonts/CreatoDisplay-BlackItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DC923CFB865A4473B79811C1 /* CreatoDisplay-Bold.otf */ = {isa = PBXFileReference; name = "CreatoDisplay-Bold.otf"; path = "../assets/fonts/CreatoDisplay-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CB53105E055C43DA8B6695D7 /* CreatoDisplay-BoldItalic.otf */ = {isa = PBXFileReference; name = "CreatoDisplay-BoldItalic.otf"; path = "../assets/fonts/CreatoDisplay-BoldItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3B3043DE081D486A9AD70FD6 /* CreatoDisplay-ExtraBold.otf */ = {isa = PBXFileReference; name = "CreatoDisplay-ExtraBold.otf"; path = "../assets/fonts/CreatoDisplay-ExtraBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8788D55CCAC44264A7ABA3E8 /* CreatoDisplay-ExtraBoldItalic.otf */ = {isa = PBXFileReference; name = "CreatoDisplay-ExtraBoldItalic.otf"; path = "../assets/fonts/CreatoDisplay-ExtraBoldItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FCF272DAD5F84740800248D1 /* CreatoDisplay-Light.otf */ = {isa = PBXFileReference; name = "CreatoDisplay-Light.otf"; path = "../assets/fonts/CreatoDisplay-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3E7CC842F78D4C449CC2E93E /* CreatoDisplay-LightItalic.otf */ = {isa = PBXFileReference; name = "CreatoDisplay-LightItalic.otf"; path = "../assets/fonts/CreatoDisplay-LightItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A357FE4CA2C54CA5943219AD /* CreatoDisplay-Medium.otf */ = {isa = PBXFileReference; name = "CreatoDisplay-Medium.otf"; path = "../assets/fonts/CreatoDisplay-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		396F00308F1744FC9D9D15CA /* CreatoDisplay-MediumItalic.otf */ = {isa = PBXFileReference; name = "CreatoDisplay-MediumItalic.otf"; path = "../assets/fonts/CreatoDisplay-MediumItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4CC8905D47764275963AE355 /* CreatoDisplay-Regular.otf */ = {isa = PBXFileReference; name = "CreatoDisplay-Regular.otf"; path = "../assets/fonts/CreatoDisplay-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2D2290903C244C1CA49DBA97 /* CreatoDisplay-RegularItalic.otf */ = {isa = PBXFileReference; name = "CreatoDisplay-RegularItalic.otf"; path = "../assets/fonts/CreatoDisplay-RegularItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		94C7D7F401F6485BA9DF8FED /* CreatoDisplay-Thin.otf */ = {isa = PBXFileReference; name = "CreatoDisplay-Thin.otf"; path = "../assets/fonts/CreatoDisplay-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		777761DD032D4BC7ACB50D0D /* CreatoDisplay-ThinItalic.otf */ = {isa = PBXFileReference; name = "CreatoDisplay-ThinItalic.otf"; path = "../assets/fonts/CreatoDisplay-ThinItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +159,20 @@
 			isa = "PBXGroup";
 			children = (
 				40D96421A72E4C07B7E50F90 /* Ionicons.ttf */,
+				BAEA7A13C23D4732BFDD131C /* CreatoDisplay-Black.otf */,
+				98C9828A0F384D08A6C1AC02 /* CreatoDisplay-BlackItalic.otf */,
+				DC923CFB865A4473B79811C1 /* CreatoDisplay-Bold.otf */,
+				CB53105E055C43DA8B6695D7 /* CreatoDisplay-BoldItalic.otf */,
+				3B3043DE081D486A9AD70FD6 /* CreatoDisplay-ExtraBold.otf */,
+				8788D55CCAC44264A7ABA3E8 /* CreatoDisplay-ExtraBoldItalic.otf */,
+				FCF272DAD5F84740800248D1 /* CreatoDisplay-Light.otf */,
+				3E7CC842F78D4C449CC2E93E /* CreatoDisplay-LightItalic.otf */,
+				A357FE4CA2C54CA5943219AD /* CreatoDisplay-Medium.otf */,
+				396F00308F1744FC9D9D15CA /* CreatoDisplay-MediumItalic.otf */,
+				4CC8905D47764275963AE355 /* CreatoDisplay-Regular.otf */,
+				2D2290903C244C1CA49DBA97 /* CreatoDisplay-RegularItalic.otf */,
+				94C7D7F401F6485BA9DF8FED /* CreatoDisplay-Thin.otf */,
+				777761DD032D4BC7ACB50D0D /* CreatoDisplay-ThinItalic.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -227,6 +269,20 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				B1118432B61B4268B0A2E4F1 /* Ionicons.ttf in Resources */,
+				CD6FC00C563A44AC8D37676D /* CreatoDisplay-Black.otf in Resources */,
+				DED968A614F54BFBAC4B1386 /* CreatoDisplay-BlackItalic.otf in Resources */,
+				8F70D3DCEC1E4597968B06EA /* CreatoDisplay-Bold.otf in Resources */,
+				816F8A6F2BD44779B153E297 /* CreatoDisplay-BoldItalic.otf in Resources */,
+				F4E9239D449D4361854A6885 /* CreatoDisplay-ExtraBold.otf in Resources */,
+				CB16CB34A757490FB70C566E /* CreatoDisplay-ExtraBoldItalic.otf in Resources */,
+				A1F009A9EF974DD8B6FFFDC9 /* CreatoDisplay-Light.otf in Resources */,
+				923E942B821C404B91F291A4 /* CreatoDisplay-LightItalic.otf in Resources */,
+				ED6694995A424AE880452FDF /* CreatoDisplay-Medium.otf in Resources */,
+				1EAD57C4A8F9422889172A0C /* CreatoDisplay-MediumItalic.otf in Resources */,
+				8C8A81C81DD14E1491C7AA41 /* CreatoDisplay-Regular.otf in Resources */,
+				6A4D07C100AD489AA3A00C44 /* CreatoDisplay-RegularItalic.otf in Resources */,
+				5E465906BE414A42B1F19EED /* CreatoDisplay-Thin.otf in Resources */,
+				55DAC70B60C245F49A35418C /* CreatoDisplay-ThinItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
