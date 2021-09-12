@@ -6,22 +6,13 @@ import { useSession } from './hooks/useSession';
 import { TabNavigator } from './navigation/TabNavigator';
 
 export default function App() {
-
-  const HomeScreen = () => {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Home!</Text>
-        <Button onPress={setLoginState} title="Cambiar Estado" />
-      </View>
-    );
-  }
   // Hook de la sesión
   const [sessionData, sessionState, setLoginState] = useSession();
   //
   if (sessionState() === 'offline') {
     return (
-      <UserContext.Provider value={sessionData}>
-        <WelcomeScreen setLoginState={setLoginState} />
+      <UserContext.Provider value={{sessionData, setLoginState}}>
+        <WelcomeScreen />
       </UserContext.Provider>);
   } else {
     return (

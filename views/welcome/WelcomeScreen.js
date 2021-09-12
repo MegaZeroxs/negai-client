@@ -2,7 +2,9 @@ import React, { useContext } from 'react';
 import { Text, View, Image, Pressable, StyleSheet, ImageBackground } from 'react-native';
 import { UserContext } from '../../context/UserContext';
 
-export const WelcomeScreen = ({ setLoginState }) => {
+export const WelcomeScreen = () => {
+
+    const {setLoginState} = useContext(UserContext)
 
     return (
         <View style={styles.container}>
@@ -45,7 +47,7 @@ const styles = StyleSheet.create({
         justifyContent: "flex-start"
     },
     big_title: {
-        fontSize: 24,
+        fontSize: 24.5,
         fontFamily: 'CreatoDisplay-Black',
         marginBottom: 15
     },
