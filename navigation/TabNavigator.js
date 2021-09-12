@@ -1,20 +1,27 @@
 import React, { useContext } from 'react'
-import { Image, View, Button } from 'react-native';
+import { Image, View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { HomeScreen } from '../views/home/HomeScreen';
+import { useHeaderHeight } from '@react-navigation/elements';
 
 export const TabNavigator = ({ setLoginState }) => {
-
-    function LogoTitle() {
+    function LogoHeader() {
         return (
-          <Image
-            style={{ width: 50, height: 50 }}
-            source={require('../assets/test_img/login.jpg')}
-          />
+            <View style={{ flexDirection: 'column-reverse', flexWrap: 'wrap', marginBottom: 5 }}>
+                <Text style={{
+                    fontSize: 40,
+                    fontFamily: 'CreatoDisplay-Black',
+                }}>N</Text>
+                <Text style={{
+                    fontSize: 26,
+                    marginBottom: 3,
+                    fontFamily: 'CreatoDisplay-Black',
+                }}>EGAI</Text>
+            </View>
         );
-      }
+    }
 
     const Tab = createBottomTabNavigator();
     return (
@@ -46,7 +53,10 @@ export const TabNavigator = ({ setLoginState }) => {
                 {/*                 <Tab.Screen name="Home">
                     {() => <HomeScreen setLoginState={setLoginState} />}
                 </Tab.Screen> */}
-                <Tab.Screen name="Inicio" options={{ headerTitle: props => <LogoTitle {...props} /> }} component={HomeScreen} />
+                <Tab.Screen name="Inicio" options={{
+                    headerTitle: props =>
+                        <LogoHeader />
+                }} component={HomeScreen} />
                 <Tab.Screen name="Buscar" component={HomeScreen} />
                 <Tab.Screen name="Mis compras" component={HomeScreen} />
                 <Tab.Screen name="Lista de deseos" component={HomeScreen} />
