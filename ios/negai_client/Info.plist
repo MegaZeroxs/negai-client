@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -51,5 +51,44 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Ionicons.ttf</string>
+		<string>CreatoDisplay-Black.otf</string>
+		<string>CreatoDisplay-BlackItalic.otf</string>
+		<string>CreatoDisplay-Bold.otf</string>
+		<string>CreatoDisplay-BoldItalic.otf</string>
+		<string>CreatoDisplay-ExtraBold.otf</string>
+		<string>CreatoDisplay-ExtraBoldItalic.otf</string>
+		<string>CreatoDisplay-Light.otf</string>
+		<string>CreatoDisplay-LightItalic.otf</string>
+		<string>CreatoDisplay-Medium.otf</string>
+		<string>CreatoDisplay-MediumItalic.otf</string>
+		<string>CreatoDisplay-Regular.otf</string>
+		<string>CreatoDisplay-RegularItalic.otf</string>
+		<string>CreatoDisplay-Thin.otf</string>
+		<string>CreatoDisplay-ThinItalic.otf</string>
+		<string>CreatoDisplay-Black.ttf</string>
+		<string>CreatoDisplay-Bold.ttf</string>
+		<string>CreatoDisplay-BoldItalic.ttf</string>
+		<string>CreatoDisplay-ExtraBold.ttf</string>
+		<string>CreatoDisplay-ExtraBoldItalic.ttf</string>
+		<string>CreatoDisplay-Regular.ttf</string>
+		<string>AntDesign.ttf</string>
+		<string>Entypo.ttf</string>
+		<string>EvilIcons.ttf</string>
+		<string>Feather.ttf</string>
+		<string>FontAwesome.ttf</string>
+		<string>FontAwesome5_Brands.ttf</string>
+		<string>FontAwesome5_Regular.ttf</string>
+		<string>FontAwesome5_Solid.ttf</string>
+		<string>Fontisto.ttf</string>
+		<string>Foundation.ttf</string>
+		<string>MaterialCommunityIcons.ttf</string>
+		<string>MaterialIcons.ttf</string>
+		<string>Octicons.ttf</string>
+		<string>SimpleLineIcons.ttf</string>
+		<string>Zocial.ttf</string>
+	</array>
 </dict>
 </plist>

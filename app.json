@@ -1,4 +1,5 @@
 {
   "name": "negai_client",
-  "displayName": "negai_client"
+  "displayName": "negai_client",
+  "orientation": "portrait"
 }
