@@ -4,12 +4,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { HomeScreen } from '../views/home/HomeScreen';
-import { useHeaderHeight } from '@react-navigation/elements';
 
 export const TabNavigator = ({ setLoginState }) => {
     function LogoHeader() {
         return (
-            <View style={{ flexDirection: 'column-reverse', flexWrap: 'wrap', marginBottom: 5 }}>
+            <View style={{ flexDirection: 'column-reverse', flexWrap: 'wrap', marginBottom: 5, backgroundColor: '#FFFFFF' }}>
                 <Text style={{
                     fontSize: 40,
                     fontFamily: 'CreatoDisplay-Black',
@@ -55,12 +54,55 @@ export const TabNavigator = ({ setLoginState }) => {
                 </Tab.Screen> */}
                 <Tab.Screen name="Inicio" options={{
                     headerTitle: props =>
-                        <LogoHeader />
+                        <LogoHeader />,
+                    headerStyle: {
+                        backgroundColor: '#FFF'
+                    }
                 }} component={HomeScreen} />
-                <Tab.Screen name="Buscar" component={HomeScreen} />
-                <Tab.Screen name="Mis compras" component={HomeScreen} />
-                <Tab.Screen name="Lista de deseos" component={HomeScreen} />
-                <Tab.Screen name="Configuración" component={HomeScreen} />
+                <Tab.Screen name="Buscar" options={{
+                    headerTitle: () =>
+                        <Text style={{
+                            fontSize: 20,
+                            fontFamily: 'CreatoDisplay-Bold',
+                        }}>Buscar</Text>
+                    ,
+                    headerStyle: {
+                        backgroundColor: '#FFF'
+                    }
+                }} component={HomeScreen} />
+                <Tab.Screen name="Mis compras" options={{
+                    headerTitle: () =>
+                        <Text style={{
+                            fontSize: 20,
+                            fontFamily: 'CreatoDisplay-Bold',
+                        }}>Mis compras</Text>
+                    ,
+                    headerStyle: {
+                        backgroundColor: '#FFF'
+                    }
+                }} component={HomeScreen} />
+                <Tab.Screen name="Lista de deseos" options={{
+                    headerTitle: () =>
+                        <Text style={{
+                            fontSize: 20,
+                            fontFamily: 'CreatoDisplay-Bold',
+                        }}>Lista de deseos</Text>
+                    ,
+                    headerStyle: {
+                        backgroundColor: '#FFF'
+                    }
+                }} component={HomeScreen} />
+                <Tab.Screen name="Configuración" options={{
+                    headerTitle: () =>
+                        <Text style={{
+                            fontSize: 20,
+                            fontFamily: 'CreatoDisplay-Bold',
+                        }}>Configuración</Text>
+                    ,
+                    headerStyle: {
+                        backgroundColor: '#FFF'
+                    }
+                }} component={HomeScreen} />
             </Tab.Navigator>
         </NavigationContainer>
     )
