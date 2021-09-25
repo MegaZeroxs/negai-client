@@ -64,15 +64,17 @@ const RegisterScreen = ({navigation}) => {
             />
           </View>
           <View style={styles.btn_containers}>
-            <Pressable style={[styles.btn, styles.btn_normal]}>
-              <Text style={styles.btn_text}>Iniciar sesión</Text>
-            </Pressable>
             <Pressable
               style={[styles.btn, styles.btn_primary]}
               onPress={() => navigation.navigate('Registrarme')}>
               <Text style={[styles.btn_text, styles.btn_text_primary]}>
                 Registrarse
               </Text>
+            </Pressable>
+            <Pressable
+              style={[styles.btn, styles.btn_normal]}
+              onPress={() => navigation.goBack()}>
+              <Text style={styles.btn_text}>Regresar</Text>
             </Pressable>
             <Text style={styles.btn_text_footer}>&copy; 2021 - Negai</Text>
           </View>
