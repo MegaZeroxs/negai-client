@@ -4,6 +4,16 @@ import { Text, View, Button, SafeAreaView, ScrollView, StyleSheet, Image, Pressa
 const win = Dimensions.get('window');
 const ratio = win.width / 540; // Anchura de la imagen
 
+const ItemScrollCard = ({ title, price, vol }) => {
+    return (
+        <View style={styles.card_scroll_container}>
+            <Image style={styles.card_img} source={require('../../assets/covers/001/cover.jpg')} />
+            <Text style={styles.card_title} numberOfLines={1}>{("Karakai no moto Takagi-san").slice(0, 22).concat('...')}</Text>
+            <Text style={styles.card_price}>Volumen {vol} - ${price}</Text>
+        </View>
+    );
+}
+
 const ItemCard = ({ title, price, vol }) => {
     return (
         <View style={styles.card_container}>
@@ -44,10 +54,11 @@ export const HomeScreen = () => {
                 <View style={styles.section_container}>
                     <Text style={styles.section_title}>Lo nuevo</Text>
                     <View style={styles.list_container}>
-
-                        <ItemCard title="Houseki no kuni" vol="1" price="14.99" />
-                        <ItemCard title="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" vol="11" price="14.99" />
-                        <ItemCard title="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" vol="11" price="14.99" />
+                        <ScrollView horizontal={true}>
+                            <ItemScrollCard title="Houseki no kuni" vol="1" price="14.99" />
+                            <ItemScrollCard title="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" vol="11" price="14.99" />
+                            <ItemScrollCard title="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" vol="11" price="14.99" />
+                        </ScrollView>
                     </View>
                 </View>
                 <ImageBackground source={require('../../assets/covers/001/cover.jpg')} resizeMode="cover" style={styles.hl_background}>
@@ -82,9 +93,14 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         width: '100%',
     },
+    card_scroll_container: {
+        flexBasis: `${(win.width / 2)}%`,
+        marginRight: 10,
+        paddingBottom: 15
+    },
     card_container: {
         flexBasis: '48%',
-        paddingBottom: 15
+        paddingBottom: 15,
     },
     card_img: {
         width: (win.width / 2.25),
