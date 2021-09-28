@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     },
     card_scroll_container: {
         flexBasis: `${(win.width / 2)}%`,
-        marginRight: 10,
+        marginRight: 15,
         paddingBottom: 15
     },
     card_container: {
@@ -115,5 +115,29 @@ export const styles = StyleSheet.create({
         backgroundColor: '#EEE',
         fontSize: 12,
         fontFamily: 'CreatoDisplay-Regular',
+    },
+    detail_container: {
+        padding: 15
+    },
+    dsc_title: {
+        fontFamily: 'CreatoDisplay-Bold',
+        color: '#000',
+        fontSize: 16
+    },
+    dsc_text: {
+        fontFamily: 'CreatoDisplay-Regular',
+        color: '#686868',
+        fontSize: 16,
+        width: '100%',
+        marginVertical: 10
+    },
+    list_detail_container : {
+        paddingVertical: 5,
+        marginLeft: 15,
+    },
+    list_text: {
+        fontFamily: 'CreatoDisplay-Regular',
+        color: '#686868',
+        fontSize: 16,
     }
 });

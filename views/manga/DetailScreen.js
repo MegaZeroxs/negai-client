@@ -2,7 +2,7 @@ import React from 'react'
 import { SafeAreaView, ScrollView, View, Text, TouchableHighlight } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { styles } from '../../assets/Styles';
-import { HeadComic } from '../user/components/HeadComic';
+import { HeadComic } from './components/HeadComic';
 
 export const DetailScreen = ({ navigation }) => {
     return (
