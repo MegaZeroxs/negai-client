@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, Button } from 'react-native';
+import { SafeAreaView, ScrollView } from 'react-native';
 import { styles } from '../../assets/Styles'
 import { HightlightCard } from './components/HightlightCard';
 import { NewContent } from './components/NewContent';
@@ -25,9 +25,9 @@ export const HomeContent = ({navigation}) => {
 
 export const HomeScreen = () => {
     return (
-        <Stack.Navigator screenOptions={{headerShown: false}}>
-            <Stack.Screen name="Home" component={HomeContent} />
-            <Stack.Screen name="About" component={DetailScreen} />
+        <Stack.Navigator>
+            <Stack.Screen options={{headerShown: false}}  name="Home" component={HomeContent} />
+            <Stack.Screen options={{headerShown: false}} name="DetailManga" component={DetailScreen} />
         </Stack.Navigator>
     )
 }

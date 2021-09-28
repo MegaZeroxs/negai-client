@@ -108,5 +108,12 @@ export const styles = StyleSheet.create({
         backgroundColor: 'transparent',
         borderColor: "#FFF",
         padding: 5
+    },
+    // Detalle del manga
+    header_go_back: {
+        padding: 5,
+        backgroundColor: '#EEE',
+        fontSize: 12,
+        fontFamily: 'CreatoDisplay-Regular',
     }
 });

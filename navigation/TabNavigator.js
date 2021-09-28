@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Image, View, Text, Button } from 'react-native';
+import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';

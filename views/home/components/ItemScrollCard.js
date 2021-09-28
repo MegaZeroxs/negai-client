@@ -4,7 +4,7 @@ import { styles } from '../../../assets/Styles';
 
 export const ItemScrollCard = ({ title, price, vol, navigation }) => {
     return (
-        <TouchableWithoutFeedback onPress={() => navigation.navigate("About")} >
+        <TouchableWithoutFeedback onPress={() => navigation.navigate("DetailManga")} >
             <View style={styles.card_scroll_container}>
                 <Image style={styles.card_img} source={require('../../../assets/covers/001/cover.jpg')} />
                 <Text style={styles.card_title} numberOfLines={1}>
