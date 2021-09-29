@@ -161,8 +161,8 @@ export const styles = StyleSheet.create({
         fontFamily: 'CreatoDisplay-Regular',
     },
     picker_style: {
-        backgroundColor: '#EEE',
         marginTop: 10,
+        backgroundColor: '#e4e1e6',
         fontFamily: 'CreatoDisplay-Regular',
     },
     text_picker_style: {
