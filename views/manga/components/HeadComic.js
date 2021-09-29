@@ -25,7 +25,7 @@ export const HeadComic = ({ title, dsc, vol, price, author, publisher, type, rel
                                     </Pressable>
                                     <Pressable
                                         style={[styles.btn, styles.btn_mini]}
-                                        onPress={() => navigation.navigate('Iniciar sesión')}>
+                                        onPress={() => navigation.navigate('Pago')}>
                                         <Text style={styles.btn_mini_text}>Ordenar ${price}</Text>
                                     </Pressable>
                                 </View>

@@ -10,7 +10,7 @@ export const DetailScreen = ({ navigation }) => {
             <ScrollView style={styles.scroolview_container}>
                 <View>
                     <TouchableHighlight style={styles.header_go_back} onPress={() => navigation.goBack()} underlayColor="white">
-                        <Text><Icon name="arrow-back-outline" />Volver</Text>
+                        <Text style={styles.txt_header_custom}><Icon style={styles.txt_header_icon_custom} name="arrow-back-outline" /> Volver</Text>
                     </TouchableHighlight>
                 </View>
                 <HeadComic
@@ -18,6 +18,7 @@ export const DetailScreen = ({ navigation }) => {
                     title="Houseki no kuni"
                     vol="1"
                     price="14.99"
+                    navigation={navigation}
                 />
             </ScrollView>
         </SafeAreaView>
