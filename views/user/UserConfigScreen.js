@@ -1,11 +1,69 @@
 import React from 'react';
-import { Text, View, Button } from 'react-native';
+import { Text, View, Button, StyleSheet, SafeAreaView, ScrollView, TextInput, Pressable } from 'react-native';
+
+import { styles } from '../../assets/Styles';
 // ..
 export const UserConfigScreen = ({ setLoginState }) => {
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#FFFFFF'}}>
-            <Text>Desloguearse</Text>
-            <Button onPress={setLoginState} title="Ir offline" />
-        </View>
+        <SafeAreaView style={[styles.scroolview_container, { flex: 1 }]}>
+            <ScrollView contentContainerStyle={{flexGrow: 1}}>
+                <View style={[styles.section_container, style.container]}>
+                    <View style={style.config_container}>
+                        <View>
+                            <Text style={styles.label}>Nombre</Text>
+                            <TextInput style={styles.input} keyboardType="default" />
+                        </View>
+                        <View>
+                            <Text style={styles.label}>Apellido</Text>
+                            <TextInput style={styles.input} keyboardType="default" />
+                        </View>
+                        <View>
+                            <Text style={styles.label}>Correo</Text>
+                            <TextInput style={styles.input} keyboardType="email-address" />
+                        </View>
+                        <View>
+                            <Text style={styles.label}>Teléfono</Text>
+                            <TextInput style={styles.input} keyboardType="number-pad" />
+                        </View>
+                        <View>
+                            <Text style={styles.label}>Dirección principal</Text>
+                            <TextInput style={styles.input} keyboardType="default" multiline={true} />
+                            <Text style={[styles.btn_inline, styles.btn_text_right]}>Agregar dirección</Text>
+                        </View>
+                    </View>
+                    <View style={style.btn_containers}>
+                        <Pressable
+                            style={[styles.btn, styles.btn_primary]}
+                            onPress={() => navigation.navigate('Registrarme')}
+                        >
+                            <Text style={[styles.btn_text, styles.btn_text_primary]}>
+                                Guardar cambios
+                            </Text>
+                        </Pressable>
+                        <Pressable
+                            style={[styles.btn, styles.btn_normal]}
+                            onPress={() => navigation.goBack()}
+                        >
+                            <Text style={styles.btn_text}>Cancelar</Text>
+                        </Pressable>
+                        <Text style={styles.btn_text_footer}>&copy; 2021 - Negai</Text>
+                    </View>
+                </View>
+            </ScrollView>
+        </SafeAreaView>
     )
 }
+
+const style = StyleSheet.create({
+    container: {
+        backgroundColor: '#FFF',
+        flex: 1,
+        flexDirection: 'column'
+    },
+    config_container: {
+        flex: 1,
+    },
+    btn_direction: {
+        textAlign: 'right',
+    },
+});
