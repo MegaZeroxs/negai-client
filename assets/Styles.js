@@ -206,43 +206,7 @@ export const styles = StyleSheet.create({
     btn_text_cancel: {
         color: "#CCC"
     },
-    btn_text_right: {
-        textAlign: 'right'
-    },
     flex_end: {
         marginTop: 25
     },
-    // Form custom Styles
-    label: {
-        fontWeight: 'bold',
-    },
-    input: {
-        backgroundColor: '#e4e1e6',
-        // height: 35,
-        paddingLeft: 15,
-        marginVertical: 10,
-    },
-
-    // Buttons
-    btn_containers: {
-        // justifyContent: 'flex-end',
-        // flex: 1,
-    },
-    btn_containers_row: {
-        backgroundColor: '#FFF',
-        paddingVertical: 35,
-        alignItems: 'center',
-        paddingHorizontal: 32,
-    },
-    btn_text_footer: {
-        color: 'grey',
-        marginTop: 25,
-        textAlign: 'center',
-        fontSize: 12,
-    },
-    // Button inline - primary
-    btn_inline: {
-        color: '#f04e98',
-        fontWeight: 'bold'
-    }
 });

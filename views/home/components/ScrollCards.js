@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Text, View, ScrollView, Button } from 'react-native';
 import { styles } from '../../../assets/Styles';
+import { useFetchComicsHome } from '../../../hooks/useFetchComicsHome';
 import { ItemScrollCard } from './ItemScrollCard';
 
-export const ScrollCards = ({navigation, title}) => {
+export const ScrollCards = ({ navigation, title }) => {
+
+    const {data:comics, loading } = useFetchComicsHome( );
     return (
         <View style={styles.section_container}>
             <Text style={styles.section_title}>{title}</Text>
             <View style={styles.list_container}>
                 <ScrollView horizontal={true}>
-                    <ItemScrollCard navigation={navigation} title="Houseki no kuni" vol="1" price="14.99" />
-                    <ItemScrollCard navigation={navigation} title="Vinland Saga" vol="11" price="14.99" />
-                    <ItemScrollCard navigation={navigation} title="Vinland Saga" vol="11" price="14.99" />
+
+                    {loading && <Text>Loading...</Text>}
+                    {console.log(comics)}
+                    {
+                        comics.map(data_comic => (
+                            <ItemScrollCard key={data_comic.id} navigation={navigation} {...data_comic} />
+                        ))
+                    }
+
                 </ScrollView>
             </View>
         </View>
