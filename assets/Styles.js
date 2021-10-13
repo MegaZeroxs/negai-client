@@ -208,5 +208,5 @@ export const styles = StyleSheet.create({
     },
     flex_end: {
         marginTop: 25
-    },
+    }
 });

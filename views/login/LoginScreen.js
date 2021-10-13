@@ -15,10 +15,20 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const LoginScreen = ({ navigation }) => {
 
 
+  const [errorMessage, setErrorMessage] = useState('')
+
   const [loginInfo, setLoginInfo] = useState({
     email: '',
     password: ''
   });
+
+  const showErrorMessage = (message) => {
+    setErrorMessage(message);
+    setTimeout(() => {
+      setErrorMessage('');
+    }, 5000);
+  }
+
 
   const useFetchLogin = () => {
     let { email, password } = loginInfo;
@@ -30,23 +40,27 @@ const LoginScreen = ({ navigation }) => {
           body: JSON.stringify(loginInfo),
           headers: { "Content-type": "application/json; charset=UTF-8" }
         }).then(response => response.json())
-          .then(json => console.log(json))
+          .then(json => {
+            if(json[0].success === true){
+              setUserData(json[0]);
+              console.log(getUserData());
+            }else{
+              showErrorMessage("Credenciales inválidas");
+            }
+          })
           .catch(err => console.log(err));
       } else {
-        alert("Introduzca un correo válido");
+        showErrorMessage("Ingrese un correo válido");
       }
     } else {
-      alert("Rellene los campos");
-
+      showErrorMessage("Rellene los campos");
     }
-
-
   }
 
-  const setUserData = async () => {
+  const setUserData = async (data) => {
     try {
-      const jsonValue = JSON.stringify({ test: 'Hola' })
-      await AsyncStorage.setItem('test', jsonValue)
+      const jsonValue = JSON.stringify(data)
+      await AsyncStorage.setItem('sessionData', jsonValue)
     } catch (e) {
       // saving error
     }
@@ -55,7 +69,7 @@ const LoginScreen = ({ navigation }) => {
 
   const getUserData = async () => {
     try {
-      const jsonValue = await AsyncStorage.getItem('test')
+      const jsonValue = await AsyncStorage.getItem('sessionData')
       jsonValue != null ? console.log(JSON.parse(jsonValue)) : console.log(null);
     } catch (e) {
       // error reading value
@@ -73,6 +87,7 @@ const LoginScreen = ({ navigation }) => {
       </View>
       <View style={styles.login}>
         <Text style={styles.title}>Iniciar sesión</Text>
+        <Text style={styles.label_error}>{errorMessage}</Text>
         <View>
           <Text style={styles.label}>Correo</Text>
           <TextInput
@@ -195,6 +210,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 12,
   },
+  label_error: {
+      color: 'red',
+      marginTop: -25,
+      marginBottom: 5
+  }
 });
 
 export default LoginScreen;
