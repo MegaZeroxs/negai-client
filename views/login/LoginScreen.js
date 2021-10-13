@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, { useContext, useState } from 'react';
 import {
   Text,
   View,
@@ -9,10 +9,60 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
-import {UserContext} from '../../context/UserContext';
+import { UserContext } from '../../context/UserContext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const LoginScreen = ({navigation}) => {
-  const {setLoginState} = useContext(UserContext);
+const LoginScreen = ({ navigation }) => {
+
+
+  const [loginInfo, setLoginInfo] = useState({
+    email: '',
+    password: ''
+  });
+
+  const useFetchLogin = () => {
+    let { email, password } = loginInfo;
+    let regex_email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (email.trim() !== '' && password.trim() !== '') {
+      if (regex_email.test(email)) {
+        fetch('http://192.168.1.2:8000/client/login', {
+          method: "POST",
+          body: JSON.stringify(loginInfo),
+          headers: { "Content-type": "application/json; charset=UTF-8" }
+        }).then(response => response.json())
+          .then(json => console.log(json))
+          .catch(err => console.log(err));
+      } else {
+        alert("Introduzca un correo válido");
+      }
+    } else {
+      alert("Rellene los campos");
+
+    }
+
+
+  }
+
+  const setUserData = async () => {
+    try {
+      const jsonValue = JSON.stringify({ test: 'Hola' })
+      await AsyncStorage.setItem('test', jsonValue)
+    } catch (e) {
+      // saving error
+    }
+  }
+
+
+  const getUserData = async () => {
+    try {
+      const jsonValue = await AsyncStorage.getItem('test')
+      jsonValue != null ? console.log(JSON.parse(jsonValue)) : console.log(null);
+    } catch (e) {
+      // error reading value
+    }
+  }
+
+  const { setLoginState } = useContext(UserContext);
 
   return (
     <KeyboardAvoidingView
@@ -30,6 +80,14 @@ const LoginScreen = ({navigation}) => {
             autoCapitalize="none"
             placeholder="correo@dominio.com"
             keyboardType="email-address"
+            onChangeText={
+              (text) => {
+                setLoginInfo({
+                  ...loginInfo,
+                  email: text
+                });
+              }
+            }
           />
         </View>
         <View>
@@ -38,17 +96,26 @@ const LoginScreen = ({navigation}) => {
             style={styles.input}
             placeholder="*******"
             secureTextEntry={true}
+            onChangeText={
+              (text) => {
+                setLoginInfo({
+                  ...loginInfo,
+                  password: text
+                });
+              }
+            }
           />
         </View>
         <View style={styles.btn_containers}>
           <Pressable
             style={[styles.btn, styles.btn_normal]}
-            onPress={setLoginState}>
+            onPress={useFetchLogin}>
             <Text style={styles.btn_text}>Iniciar sesión</Text>
           </Pressable>
           <Pressable
             style={[styles.btn, styles.btn_primary]}
-            onPress={() => navigation.navigate('Registrarme')}>
+            onPress={getUserData}
+           /*  onPress={() => navigation.navigate('Registrarme')} */>
             <Text style={[styles.btn_text, styles.btn_text_primary]}>
               Registrarse
             </Text>

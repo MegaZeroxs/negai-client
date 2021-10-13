@@ -5,7 +5,6 @@ import { Text, View, Image, Pressable, ImageBackground, FlatList, ScrollView, Sa
 import {Picker} from '@react-native-picker/picker';
 import { useFetchComicData } from '../../hooks/useFetchComicData';
 
-
 export const CheckoutScreen = ({route, navigation }) => {
     const [selectedLanguage, setSelectedLanguage] = useState();
     const { id_comic } = route.params;
