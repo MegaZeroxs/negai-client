@@ -43,7 +43,7 @@ const LoginScreen = ({ navigation }) => {
           .then(json => {
             if(json[0].success === true){
               setUserData(json[0]);
-              console.log(getUserData());
+              navigation.goBack();
             }else{
               showErrorMessage("Credenciales inválidas");
             }
@@ -63,16 +63,6 @@ const LoginScreen = ({ navigation }) => {
       await AsyncStorage.setItem('sessionData', jsonValue)
     } catch (e) {
       // saving error
-    }
-  }
-
-
-  const getUserData = async () => {
-    try {
-      const jsonValue = await AsyncStorage.getItem('sessionData')
-      jsonValue != null ? console.log(JSON.parse(jsonValue)) : console.log(null);
-    } catch (e) {
-      // error reading value
     }
   }
 
@@ -128,8 +118,7 @@ const LoginScreen = ({ navigation }) => {
           </Pressable>
           <Pressable
             style={[styles.btn, styles.btn_primary]}
-            onPress={getUserData}
-           /*  onPress={() => navigation.navigate('Registrarme')} */>
+            onPress={() => navigation.navigate('Registrarme')}>
             <Text style={[styles.btn_text, styles.btn_text_primary]}>
               Registrarse
             </Text>

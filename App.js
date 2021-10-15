@@ -12,6 +12,7 @@ export default function App() {
   useEffect(() => {
 
     const sessionStatus = async () => {
+      
       try {
         const jsonValue = await AsyncStorage.getItem('sessionData')
         let newObj;

@@ -14,7 +14,6 @@ export const ScrollCards = ({ navigation, title }) => {
                 <ScrollView horizontal={true}>
 
                     {loading && <Text>Loading...</Text>}
-                    {console.log(comics)}
                     {
                         comics.map(data_comic => (
                             <ItemScrollCard key={data_comic.id} navigation={navigation} {...data_comic} />
