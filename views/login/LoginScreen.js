@@ -77,7 +77,6 @@ const LoginScreen = ({ navigation }) => {
   }
 
   const { setLoginState } = useContext(UserContext);
-
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}

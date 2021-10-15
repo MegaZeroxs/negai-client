@@ -1,12 +1,24 @@
 import React from 'react';
 import { Text, View, Button, StyleSheet, SafeAreaView, ScrollView, TextInput, Pressable } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { styles } from '../../assets/Styles';
 // ..
 export const UserConfigScreen = ({ setLoginState }) => {
+
+
+    const logOut = async () => {
+        try {
+            const jsonValue = JSON.stringify({success: false})
+            await AsyncStorage.setItem('sessionData', jsonValue)
+        } catch (e) {
+            // saving error
+        }
+    }
+
     return (
         <SafeAreaView style={[styles.scroolview_container, { flex: 1 }]}>
-            <ScrollView contentContainerStyle={{flexGrow: 1}}>
+            <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
                 <View style={[styles.section_container, style.container]}>
                     <View style={style.config_container}>
                         <View>
@@ -42,7 +54,7 @@ export const UserConfigScreen = ({ setLoginState }) => {
                         </Pressable>
                         <Pressable
                             style={[styles.btn, styles.btn_normal]}
-                            onPress={() => navigation.goBack()}
+                            onPress={logOut}
                         >
                             <Text style={styles.btn_text}>Cancelar</Text>
                         </Pressable>
