@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { UserContext } from '../../context/UserContext';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import RNRestart from 'react-native-restart'; // Import package from node modules
 
 const LoginScreen = ({ navigation }) => {
 
@@ -35,7 +36,7 @@ const LoginScreen = ({ navigation }) => {
     let regex_email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (email.trim() !== '' && password.trim() !== '') {
       if (regex_email.test(email)) {
-        fetch('http://192.168.1.2:8000/client/login', {
+        fetch('http://192.168.1.3:8000/client/login', {
           method: "POST",
           body: JSON.stringify(loginInfo),
           headers: { "Content-type": "application/json; charset=UTF-8" }
@@ -43,7 +44,8 @@ const LoginScreen = ({ navigation }) => {
           .then(json => {
             if(json[0].success === true){
               setUserData(json[0]);
-              navigation.goBack();
+              RNRestart.Restart();
+
             }else{
               showErrorMessage("Credenciales inválidas");
             }

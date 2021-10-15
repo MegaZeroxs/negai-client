@@ -1,6 +1,6 @@
 export const getComicById = async (id_comic) => {
 
-    const url = `http://192.168.1.2:8000/comics/${id_comic}`;
+    const url = `http://192.168.1.3:8000/comics/${id_comic}`;
     const resp = await fetch(url);
     const data = await resp.json();
     const new_data = data[0];

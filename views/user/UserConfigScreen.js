@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, Button, StyleSheet, SafeAreaView, ScrollView, TextInput, Pressable } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import RNRestart from 'react-native-restart'; // Import package from node modules
 
 import { styles } from '../../assets/Styles';
 // ..
@@ -11,6 +12,7 @@ export const UserConfigScreen = ({ setLoginState }) => {
         try {
             const jsonValue = JSON.stringify({success: false})
             await AsyncStorage.setItem('sessionData', jsonValue)
+            RNRestart.Restart();
         } catch (e) {
             // saving error
         }
@@ -56,7 +58,7 @@ export const UserConfigScreen = ({ setLoginState }) => {
                             style={[styles.btn, styles.btn_normal]}
                             onPress={logOut}
                         >
-                            <Text style={styles.btn_text}>Cancelar</Text>
+                            <Text style={styles.btn_text}>Cerrar sesión</Text>
                         </Pressable>
                         <Text style={styles.btn_text_footer}>&copy; 2021 - Negai</Text>
                     </View>

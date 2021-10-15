@@ -54,7 +54,7 @@ export const CheckoutScreen = ({route, navigation }) => {
                     </View>
                     <View style={styles.padding_top}>
                         <View style={styles.detail_checkout}><Text style={styles.detail_text_checkout}>{comic.title} - {comic.vol} + IVA</Text><Text style={styles.detail_price_checkout}>${parseFloat(comic.price).toFixed(2)}</Text></View>
-                        <View style={styles.detail_checkout}><Text style={styles.detail_text_checkout}>Vinland Saga Volumen 15 + IVA</Text><Text style={styles.detail_price_checkout}>$2.99</Text></View>
+                        <View style={styles.detail_checkout}><Text style={styles.detail_text_checkout}>Envio</Text><Text style={styles.detail_price_checkout}>$2.99</Text></View>
                         <View style={[styles.detail_checkout, styles.padding_top]}><Text style={styles.detail_text_checkout}></Text><Text style={styles.detail_price_checkout}>Total: ${(parseFloat(comic.price) + 2.99).toFixed(2)}</Text></View>
                     </View>
                     <View style={[styles.btn_containers_row, styles.flex_end]}>

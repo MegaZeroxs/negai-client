@@ -1,6 +1,6 @@
 export const getComics = async() => {
 
-    const url = `http://192.168.1.2:8000/comics`;
+    const url = `http://192.168.1.3:8000/comics`;
     const resp = await fetch( url );
     const data = await resp.json();
 
