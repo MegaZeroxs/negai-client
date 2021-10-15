@@ -27,6 +27,10 @@ export const styles = StyleSheet.create({
         flexBasis: '48%',
         paddingBottom: 15,
     },
+    shopping_card_container: {
+        flexBasis: '48%',
+        paddingBottom: 15,
+    },
     card_img: {
         width: (win.width / 2.25),
         height: 340 * ratio, //340 es la altura de los cover originales

@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { HomeScreen } from '../views/home/HomeScreen';
 import { UserConfigScreen } from '../views/user/UserConfigScreen';
+import { ShoppingListScreen } from '../views/shopping/ShoppingListScreen';
 
 export const TabNavigator = ({ setLoginState }) => {
     const LogoHeader = () => {
@@ -76,7 +77,7 @@ export const TabNavigator = ({ setLoginState }) => {
                     headerStyle: {
                         backgroundColor: '#FFF'
                     }
-                }} component={HomeScreen} />
+                }} component={ShoppingListScreen} />
                 <Tab.Screen name="Mis compras" options={{
                     headerTitle: () =>
                         <TabHeader title={'Mis compras'} />
@@ -84,7 +85,7 @@ export const TabNavigator = ({ setLoginState }) => {
                     headerStyle: {
                         backgroundColor: '#FFF'
                     }
-                }} component={HomeScreen} />
+                }} component={ShoppingListScreen} />
                 <Tab.Screen name="Lista de deseos" options={{
                     headerTitle: () =>
                         <TabHeader title={'Lista de deseos'} />
