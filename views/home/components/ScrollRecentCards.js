@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Text, View, ScrollView, Button } from 'react-native';
 import { styles } from '../../../assets/Styles';
-import { useFetchComicsHome } from '../../../hooks/useFetchComicsHome';
+import { useFetchComicsRecentHome } from '../../../hooks/useFetchComicsRecentHome';
 import { ItemScrollCard } from './ItemScrollCard';
 
-export const ScrollCards = ({ navigation, title }) => {
+export const ScrollRecentCards = ({ navigation, title }) => {
 
-    const {data:comics, loading } = useFetchComicsHome( );
+    const {data:comics, loading } = useFetchComicsRecentHome( );
     return (
-        <View style={[styles.section_container, {marginTop: 10}]}>
+        <View style={styles.section_container}>
             <Text style={styles.section_title}>{title}</Text>
             <View style={styles.list_container}>
                 <ScrollView horizontal={true}>
