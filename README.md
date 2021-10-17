@@ -4,22 +4,34 @@
 
 ![](https://img.shields.io/badge/-Frontend-blue) ![](https://img.shields.io/badge/-React%20Native-9cf)
 
-### Integrantes
+-------
+### Authors
+- Erick Fabricio Arévalo Henríquez G02T [@MegaZeroxs](https://github.com/MegaZeroxs)
+- Miguel Alejandro Meléndez Martínez G02T [@Alejandro9917](https://github.com/Alejandro9917)
+- José Samuel Mena Reyes G02T [@luisedu99](https://github.com/luisedu99)
+- Luis Eduardo Cañas Santos G02T [@JSamuelM](https://github.com/JSamuelM)
 
-- Erick Fabricio Arévalo Henríquez
-- Miguel Alejandro Meléndez Martínez
-- José Samuel Mena Reyes
-- Luis Eduardo Cañas Santos
+
+------
+### Manuales
+[Manual de usuario](https://udbedu-my.sharepoint.com/:b:/g/personal/mm180363_alumno_udb_edu_sv/EXThJlscbBhCkC0Mt2iRNUIBqg9Ebabht-6GeYxZyMxmzw?e=L65H8s)
+[Manual técnico](https://udbedu-my.sharepoint.com/:b:/g/personal/mm180363_alumno_udb_edu_sv/EckEBf6mW4VMlzlzrFhjK6IBXRn5_Je4EWcC1sHv1Yn8QA?e=oJLZh8)
+
+
+------
+### Trello
+[Tablero en Trello](https://trello.com/b/9Cc8XjqD/proyecto-de-c%C3%A1tedra-negai)
+
+
+------
+### Vídeo
+[Vídeo segunda fase](https://drive.google.com/file/d/1mmlz9cDzz3Io8x_N2s8d-mYOGYriKjmd/view?fbclid=IwAR3CDREquRcnmGJfU0YZ8HM6F2c3Ccsl438P-1H1g3f3QgQSiJpB4Q1d7W8)
 
 
 ------
 ### Documento
 [Documento](https://udbedu-my.sharepoint.com/:b:/g/personal/mm180363_alumno_udb_edu_sv/ERU_GPZ7mxpCoUs3nMlY-3YBFZ5hZZMWQuDjGFLFswQ8Lw?e=yy6Euy)
 
-
-------
-### Tablero de Trello 
-- Acceder a [tablero de Trello](https://trello.com/b/9Cc8XjqD/proyecto-de-c%C3%A1tedra-negai)
 
 ------
 ### MockUps
