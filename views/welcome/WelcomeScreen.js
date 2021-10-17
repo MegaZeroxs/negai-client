@@ -7,6 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import RegisterScreen from '../register/RegisterScreen';
 
 const WelcomeOptionScreen = ({navigation}) => {
+    
     const { setLoginState } = useContext(UserContext);
     return (
         <View style={styles.container}>
