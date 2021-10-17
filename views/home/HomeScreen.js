@@ -7,6 +7,7 @@ import { DetailScreen } from '../manga/DetailScreen';
 import { ScrollCards } from './components/ScrollCards';
 import { CheckoutScreen } from '../manga/CheckoutScreen';
 import { ScrollRecentCards } from './components/ScrollRecentCards';
+import { CollectionDetailsScreen } from './components/CollectionDetailsScreen';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,7 @@ export const HomeContent = ({ navigation }) => {
                     title="Houseki no kuni"
                     vol="1"
                     price="14.99"
+                    navigation={navigation}
                 />
                 <ScrollCards navigation={navigation} title="Descubrimiento" />
             </ScrollView>
@@ -33,6 +35,7 @@ export const HomeScreen = () => {
             <Stack.Screen options={{ headerShown: false }} name="Home" component={HomeContent} />
             <Stack.Screen options={{ headerShown: false }} name="DetailManga" component={DetailScreen} />
             <Stack.Screen options={{ headerShown: false }} name="Pago" component={CheckoutScreen} />
+            <Stack.Screen options={{ headerShown: false }} name="CollectionsManga" component={CollectionDetailsScreen} />
         </Stack.Navigator>
     )
 }

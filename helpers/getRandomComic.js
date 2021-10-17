@@ -13,7 +13,8 @@ export const getRandomComic = async () => {
         author: data.author,
         publisher: data.publisher,
         type: data.type,
-        edition: data.edition
+        edition: data.edition,
+        collection_id: data.collection_id
     }
 
     return comic;

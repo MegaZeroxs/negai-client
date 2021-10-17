@@ -3,7 +3,7 @@ import { Text, View, Image, Pressable, ImageBackground } from 'react-native';
 import { styles } from '../../../assets/Styles';
 import { useFetchRandomComic } from '../../../hooks/useFetchRandomComic';
 
-export const HightlightCard = ({ title, dsc }) => {
+export const HightlightCard = ({navigation }) => {
 
     const {data:comic, loading } = useFetchRandomComic();
 
@@ -22,7 +22,7 @@ export const HightlightCard = ({ title, dsc }) => {
                         <View style={styles.btn_containers_row}>
                             <Pressable
                                 style={[styles.btn, styles.btn_mini]}
-                                onPress={() => navigation.navigate('Iniciar sesión')}>
+                                onPress={() => navigation.navigate("CollectionsManga", {collection_id: comic.collection_id, collection_name: comic.title})}>
                                 <Text style={styles.btn_mini_text}>Ver colección</Text>
                             </Pressable>
                         </View>
