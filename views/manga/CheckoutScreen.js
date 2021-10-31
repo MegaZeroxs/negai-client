@@ -1,15 +1,39 @@
 import React, {useState} from 'react';
 import { styles } from '../../assets/Styles';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Text, View, Image, Pressable, ImageBackground, FlatList, ScrollView, SafeAreaView, TouchableHighlight } from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 import { useFetchComicData } from '../../hooks/useFetchComicData';
+import { setComicBill } from '../../helpers/setComicBill';
+
+const getUserId = async () => {
+    try {
+        const jsonValue = await AsyncStorage.getItem('sessionData')
+        let newObj;
+        newObj = JSON.parse(jsonValue);
+        return newObj[0].id;
+    } catch (e) {
+        // error reading value
+    } 
+}
 
 export const CheckoutScreen = ({route, navigation }) => {
     const [selectedLanguage, setSelectedLanguage] = useState();
     const { id_comic } = route.params;
     const {data:comic, loading } = useFetchComicData(id_comic);
+    const userId = getUserId();
+    console.log(userId);
     
+    const setDBComicBill = () => {
+        let checkOutData = {
+            client_id: userId,
+            comic_id: id_comic,
+            state: 1
+        }
+        setComicBill(checkOutData);
+    }
+
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <ScrollView style={styles.scroolview_container}>
@@ -58,8 +82,8 @@ export const CheckoutScreen = ({route, navigation }) => {
                         <View style={[styles.detail_checkout, styles.padding_top]}><Text style={styles.detail_text_checkout}></Text><Text style={styles.detail_price_checkout}>Total: ${(parseFloat(comic.price) + 2.99).toFixed(2)}</Text></View>
                     </View>
                     <View style={[styles.btn_containers_row, styles.flex_end]}>
-                        <Pressable style={[styles.btn, styles.btn_primary]} onPress={() => navigation.navigate('Registrarme')}><Text style={[styles.btn_text, styles.btn_text_primary]}>Ordenar</Text></Pressable>
-                        <Pressable style={[styles.btn, styles.btn_cancel]} onPress={() => navigation.navigate('Iniciar sesión')}><Text style={[styles.btn_text, styles.btn_text_cancel]}>Cancelar</Text></Pressable>
+                        <Pressable style={[styles.btn, styles.btn_primary]} onPress={() => setDBComicBill()}><Text style={[styles.btn_text, styles.btn_text_primary]}>Ordenar</Text></Pressable>
+                        <Pressable style={[styles.btn, styles.btn_cancel]} onPress={() => navigation.goBack()}><Text style={[styles.btn_text, styles.btn_text_cancel]}>Cancelar</Text></Pressable>
                     </View>
                 </View>
             </ScrollView>
