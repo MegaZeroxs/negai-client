@@ -1,6 +1,8 @@
+import {SERVER_URL} from "@env";
+
 export const getRandomComic = async () => {
 
-    const url = `http://192.168.1.3:8000/comic/random`;
+    const url = `${SERVER_URL}/comic/random`;
     const resp = await fetch(url);
     const data = await resp.json();
     const comic = {

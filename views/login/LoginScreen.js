@@ -9,6 +9,7 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
+import {SERVER_URL} from "@env";
 import { UserContext } from '../../context/UserContext';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import RNRestart from 'react-native-restart'; // Import package from node modules
@@ -32,11 +33,12 @@ const LoginScreen = ({ navigation }) => {
 
 
   const useFetchLogin = () => {
+    console.log(`${SERVER_URL}/client/login`);
     let { email, password } = loginInfo;
     let regex_email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (email.trim() !== '' && password.trim() !== '') {
       if (regex_email.test(email)) {
-        fetch('http://192.168.1.3:8000/client/login', {
+        fetch(`${SERVER_URL}/client/login`, {
           method: "POST",
           body: JSON.stringify(loginInfo),
           headers: { "Content-type": "application/json; charset=UTF-8" }
