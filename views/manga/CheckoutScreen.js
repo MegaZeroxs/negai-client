@@ -1,17 +1,17 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { styles } from '../../assets/Styles';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Text, View, Image, Pressable, ImageBackground, FlatList, ScrollView, SafeAreaView, TouchableHighlight } from 'react-native';
-import {Picker} from '@react-native-picker/picker';
+import { Picker } from '@react-native-picker/picker';
 import { useFetchComicData } from '../../hooks/useFetchComicData';
 import { setComicBill } from '../../helpers/setComicBill';
 
-export const CheckoutScreen = ({route, navigation }) => {
+export const CheckoutScreen = ({ route, navigation }) => {
 
     const [userId, setuserId] = useState();
 
-    useEffect( () => {
+    useEffect(() => {
         const getUserId = async () => {
             try {
                 const jsonValue = await AsyncStorage.getItem('sessionData')
@@ -20,16 +20,15 @@ export const CheckoutScreen = ({route, navigation }) => {
                 setuserId(newObj['0'].id);
             } catch (e) {
                 // error reading value
-            } 
+            }
         }
         getUserId();
     }, [])
-
+    
     const [selectedLanguage, setSelectedLanguage] = useState();
     const { id_comic } = route.params;
-    const {data:comic, loading } = useFetchComicData(id_comic);
-    console.log(userId);
-    
+    const { data: comic, loading } = useFetchComicData(id_comic);
+
     const setDBComicBill = () => {
         let checkOutData = {
             client_id: userId,
@@ -38,6 +37,7 @@ export const CheckoutScreen = ({route, navigation }) => {
         }
         setComicBill(checkOutData);
     }
+    
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
@@ -51,7 +51,7 @@ export const CheckoutScreen = ({route, navigation }) => {
                     <View style={styles.hl_sec_container}>
                         <View style={styles.hl_img_card_container}>
                             <View style={styles.hl_card_container}>
-                                <Image style={styles.hl_card_img} source={{uri: comic.image}} />
+                                <Image style={styles.hl_card_img} source={{ uri: comic.image }} />
                             </View>
                         </View>
                         <View style={styles.hl_card_container}>
