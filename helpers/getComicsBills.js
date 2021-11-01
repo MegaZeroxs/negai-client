@@ -2,7 +2,7 @@ import {SERVER_URL} from "@env";
 
 export const getComicsBills = async(id_user) => {
 
-    const url = `${SERVER_URL}/client/bills/1`;
+    const url = `${SERVER_URL}/client/bills/${id_user}`;
     const resp = await fetch( url );
     const data = await resp.json();
 

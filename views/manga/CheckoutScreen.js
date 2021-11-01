@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { styles } from '../../assets/Styles';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -7,22 +7,27 @@ import {Picker} from '@react-native-picker/picker';
 import { useFetchComicData } from '../../hooks/useFetchComicData';
 import { setComicBill } from '../../helpers/setComicBill';
 
-const getUserId = async () => {
-    try {
-        const jsonValue = await AsyncStorage.getItem('sessionData')
-        let newObj;
-        newObj = JSON.parse(jsonValue);
-        return newObj[0].id;
-    } catch (e) {
-        // error reading value
-    } 
-}
-
 export const CheckoutScreen = ({route, navigation }) => {
+
+    const [userId, setuserId] = useState();
+
+    useEffect( () => {
+        const getUserId = async () => {
+            try {
+                const jsonValue = await AsyncStorage.getItem('sessionData')
+                let newObj;
+                newObj = JSON.parse(jsonValue);
+                setuserId(newObj['0'].id);
+            } catch (e) {
+                // error reading value
+            } 
+        }
+        getUserId();
+    }, [])
+
     const [selectedLanguage, setSelectedLanguage] = useState();
     const { id_comic } = route.params;
     const {data:comic, loading } = useFetchComicData(id_comic);
-    const userId = getUserId();
     console.log(userId);
     
     const setDBComicBill = () => {

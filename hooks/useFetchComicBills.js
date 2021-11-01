@@ -2,16 +2,6 @@ import { useState, useEffect } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getComicsBills } from '../helpers/getComicsBills';
 
-const getUserId = async () => {
-    try {
-        const jsonValue = await AsyncStorage.getItem('sessionData')
-        let newObj;
-        newObj = JSON.parse(jsonValue);
-        return newObj[0].id;
-    } catch (e) {
-        // error reading value
-    } 
-}
 
 export const useFetchComicBills = () => {
     
@@ -21,13 +11,26 @@ export const useFetchComicBills = () => {
     });
 
     useEffect( () => {
-        getComicsBills(getUserId())
-            .then( comics => {
-                setState({
-                    data: comics,
-                    loading: false
-                });
-            })
+        const getUserId = async () => {
+            try {
+                const jsonValue = await AsyncStorage.getItem('sessionData')
+                let newObj;
+                newObj = JSON.parse(jsonValue);
+                const userId = newObj['0'].id;
+                getComicsBills(userId)
+                .then( comics => {
+                    setState({
+                        data: comics,
+                        loading: false
+                    });
+                })
+            } catch (e) {
+                // error reading value
+            } 
+        }
+
+        getUserId();
+
 
     }, [])
 
