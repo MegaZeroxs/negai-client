@@ -2,7 +2,7 @@ import {SERVER_URL} from "@env";
 
 export const getComics = async() => {
 
-    const url = `${SERVER_URL}/comics`;
+    const url = `http://192.168.1.3:8000/comics`;
     const resp = await fetch( url );
     const data = await resp.json();
 

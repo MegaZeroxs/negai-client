@@ -5,7 +5,7 @@ export const setComicBill = async(data_bill) => {
     let urlParameters = Object.entries(data_bill).map(e => e.join('=')).join('&');
     console.log(urlParameters);
 
-    const url = `${SERVER_URL}/bills?${urlParameters}`;
+    const url = `http://192.168.1.3:8000/bills?${urlParameters}`;
     const resp = await fetch(
         url, {
             method: 'POST',

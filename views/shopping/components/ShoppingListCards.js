@@ -6,7 +6,8 @@ import { ItemShoppingCards } from './ItemShoppingCard';
 
 export const ShoppingListCards = ({ navigation, title }) => {
 
-    const { data: comics, loading } = useFetchComicBills();
+    const { data:comics, loading } = useFetchComicBills();
+
     return (
         <View style={styles.section_container}>
             {/*<Text style={styles.section_title}>{title}</Text>*/}

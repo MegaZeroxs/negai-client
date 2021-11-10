@@ -33,12 +33,12 @@ const LoginScreen = ({ navigation }) => {
 
 
   const useFetchLogin = () => {
-    console.log(`${SERVER_URL}/client/login`);
+    console.log(`http://192.168.1.3:8000/client/login`);
     let { email, password } = loginInfo;
     let regex_email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (email.trim() !== '' && password.trim() !== '') {
       if (regex_email.test(email)) {
-        fetch(`${SERVER_URL}/client/login`, {
+        fetch(`http://192.168.1.3:8000/client/login`, {
           method: "POST",
           body: JSON.stringify(loginInfo),
           headers: { "Content-type": "application/json; charset=UTF-8" }

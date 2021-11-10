@@ -36,9 +36,12 @@ export const CheckoutScreen = ({ route, navigation }) => {
             state: 1
         }
         setComicBill(checkOutData);
+        alert("¡Se ha realizado la compra!");
+        setTimeout(() => {
+            navigation.navigate('Home');
+        }, 2000);
     }
     
-
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <ScrollView style={styles.scroolview_container}>

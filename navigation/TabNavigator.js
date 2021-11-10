@@ -70,14 +70,14 @@ export const TabNavigator = ({ setLoginState }) => {
                         backgroundColor: '#FFF'
                     }
                 }} component={HomeScreen} />
-                <Tab.Screen name="Buscar" options={{
+{/*                 <Tab.Screen name="Buscar" options={{
                     headerTitle: () =>
                         <TabHeader title={'Buscar'} />
                     ,
                     headerStyle: {
                         backgroundColor: '#FFF'
                     }
-                }} component={ShoppingListScreen} />
+                }} component={ShoppingListScreen} /> */}
                 <Tab.Screen name="Mis compras" options={{
                     headerTitle: () =>
                         <TabHeader title={'Mis compras'} />
@@ -86,14 +86,14 @@ export const TabNavigator = ({ setLoginState }) => {
                         backgroundColor: '#FFF'
                     }
                 }} component={ShoppingListScreen} />
-                <Tab.Screen name="Lista de deseos" options={{
+                {/* <Tab.Screen name="Lista de deseos" options={{
                     headerTitle: () =>
                         <TabHeader title={'Lista de deseos'} />
                     ,
                     headerStyle: {
                         backgroundColor: '#FFF'
                     }
-                }} component={HomeScreen} />
+                }} component={HomeScreen} /> */}
                 <Tab.Screen name="Configuración" options={{
                     headerTitle: () =>
                         <TabHeader title={'Configuración'} />
